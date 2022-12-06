@@ -24,8 +24,10 @@ namespace EmailSender.Controllers
             smtp.Authenticate("shalala.shafiyeva23@gmail.com", "julnvkdbnafxteqx");
             smtp.Send(email);
             smtp.Disconnect(true);
-
+            //Вывод содержимого сообщения в консоли
+            Console.WriteLine(email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = body });
             return Ok();
         }
+         
     }
 }
